@@ -188,7 +188,18 @@ main{
 	font-size: 16px;
 }
 
+#text h2 {
+	text-align: center;
+}
+
+#text p {
+	text-align: center;
+	font-size: medium;
+	margin-top: 25px;
+}
+
 .foottext {
+	border-top: 2px solid #dbd2d2;
 	text-align: center;
 	font-size: small;
 }
