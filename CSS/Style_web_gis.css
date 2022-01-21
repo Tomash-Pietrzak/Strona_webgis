@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 
 * {
 	margin: 0px;
@@ -29,7 +28,7 @@ header {
     align-items: center;
 }
 
-.head h2 {font: 'Josefin Sans'}
+.head h2 {font-family: "Avenir Next" !important}
 
 #icon {
 	width: 70px;
@@ -238,15 +237,12 @@ main{
 
 .fa-linkedin {
 	background: white;
-	color: white;
 }
 
 .fa-facebook {
 	background: white;
-	color: white;
 }
 
 .fa-github {
-	background: whites;
-	color: white;
+	background: white;
 }
