@@ -175,6 +175,7 @@ section h1 {
 }
 
 #text {
+	margin-top: 15px;
 	height: 40vh;
 	width: 100%;
 }
@@ -195,11 +196,57 @@ main{
 #text p {
 	text-align: center;
 	font-size: medium;
-	margin-top: 25px;
+	margin-top: 15px;
 }
 
 .foottext {
 	border-top: 2px solid #dbd2d2;
-	text-align: center;
-	font-size: small;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.footsoc {
+	flex: 0 1 auto;
+}
+
+.footsoc * {
+	display: inline-block;
+}
+
+.footsoc p sub span a{
+	vertical-align: bottom;
+	text-decoration: none;
+	color: #FF0000;
+}
+
+.footsoc a:link, a:visited,  a:hover, a:active {
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+}
+
+#footicons {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	display: inline;
+}
+
+.fa-linkedin {
+	background: white;
+	color: white;
+}
+
+.fa-facebook {
+	background: white;
+	color: white;
+}
+
+.fa-github {
+	background: whites;
+	color: white;
 }
