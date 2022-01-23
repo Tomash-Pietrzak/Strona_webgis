@@ -9,9 +9,9 @@ require([
     "esri/widgets/BasemapGallery",
     "esri/widgets/Expand",
     "esri/widgets/LayerList",
-    "esri/widgets/Measurement",
+    "esri/widgets/DistanceMeasurement2D",
     "esri/widgets/Search",
-], function (esriConfig, WebMap, MapView, ScaleBar, Legend, BasemapGallery, Expand, LayerList, Measurement, Search) {
+], function (esriConfig, WebMap, MapView, ScaleBar, Legend, BasemapGallery, Expand, LayerList, DistanceMeasurement2D, Search) {
 
     esriConfig.apiKey = "AAPKb3392f1605744b938328349d8bbcc26aYzDBpljmCG_A187wY3SjiBZyWhphttQP1yLgvIjXQAabtCHZh-Pmpg1DTRnq4eQ6"
 
@@ -35,11 +35,13 @@ require([
 
     // Widgety
 
+    const legend = new Legend({
+        view: view
+    })
+
     const scalebar = new ScaleBar({
         view: view
     });
-
-    view.ui.add(scalebar, "bottom-left");
 
     const bmWg = new BasemapGallery({
         view: view
@@ -50,6 +52,11 @@ require([
         content: bmWg
     });
 
+    const expandLg = new Expand({
+        view: view,
+        content: legend
+    });
+
     const searchWidget = new Search({
         view: view
     });
@@ -57,6 +64,16 @@ require([
     const layerList = new LayerList({
         view:view
     });
+
+    let measurement = new DistanceMeasurement2D({
+        view: view
+    });
+
+    view.ui.add(measurement, "top-right");
+    
+    view.ui.add(expandLg, "bottom-left");
+
+    view.ui.add(scalebar, "bottom-left")
 
     view.ui.add(searchWidget, {
         position: "bottom-right"
@@ -69,6 +86,7 @@ require([
     view.ui.add(expandWg, {
         position: "top-right"
     });
+
 
     link1.addEventListener("click", function(event) {
         event.preventDefault();
